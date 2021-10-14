@@ -25,6 +25,7 @@ This project now has actual code challenges! This challenges are meant to cover 
     - [Insertion Sort](#insertion-sort)
     - [Merge Sort](#merge-sort)
     - [Quick Sort](#quick-sort)
+  - [Union Find](#union-find)
 - [Additional Resources](#additional-resources)
 
 
@@ -420,6 +421,8 @@ DFS(root node)
 - Quicksort is likely faster in practice, but merge sort is faster on paper.
 - Merge Sort divides the set into the smallest possible groups immediately then reconstructs the incrementally as it sorts the groupings.
 - Quicksort continually partitions the data set by a pivot, until the set is recursively sorted.
+
+## <a id="union-find"></a>Union Find
 
 ## <a id="additional-resources"></a>Additional Resources
 [Khan Academy's Algorithm Course](https://www.khanacademy.org/computing/computer-science/algorithms)
