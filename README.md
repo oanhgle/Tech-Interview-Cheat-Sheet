@@ -424,5 +424,39 @@ DFS(root node)
 
 ## <a id="union-find"></a>Union Find
 
+#### Definition
+We use Union find to dentify whether elements belong to the same subset or not. It is an approach to solve dynamic connectivity in graph theory, such as in social networks (are two people connected via friends or not), or in image processing (are pixels connected or separated).
+
+#### Pseudocode Union Find by rank and compression
+```
+vector<int> parents
+vector<int> rank
+
+find(node):
+  if(parents[node] == -1)
+      return node
+  return find(parents[node])
+
+union(a, b):
+  if(a == b):
+      return
+  // attach the smaller tree under the root of higher rank tree
+  if(rank[a] > rank[b]):
+      parents[b] = a
+      rank[a] += rank[b]
+  else:
+      parents[a] = b
+      rank[b] += rank[a]
+      
+link(size, node1, node2):
+  parents.resize(size, -1)
+  rank.resize(size, 0)
+  union(find(node1),find(node2))
+```
+
+#### Time Complexity
+Ackermann
+Find and Union both takes O(𝛼(𝑛)) (or O(lg * n))
+
 ## <a id="additional-resources"></a>Additional Resources
 [Khan Academy's Algorithm Course](https://www.khanacademy.org/computing/computer-science/algorithms)
