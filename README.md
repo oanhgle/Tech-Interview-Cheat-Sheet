@@ -243,6 +243,22 @@ This algorithm never needed to compare all the differences to one another, savin
   - Because it uses a queue it is more memory intensive than **depth first search**.
   - The queue uses more memory because it needs to stores pointers
 
+#### Pseudocode
+```
+BFS (root node)
+  create queue
+  create list of visited node
+  mark root node as visited
+  enqueue root node
+  while(queue is not empty):
+    x = queue.front()
+    queue.pop()
+    for(each neighbor n of x):
+      if(n not visited):
+         enqueue
+         mark n as visited
+```
+
 #### Time Complexity
 - Search: Breadth First Search: O(V + E)
 - E is number of edges
@@ -261,6 +277,22 @@ This algorithm never needed to compare all the differences to one another, savin
 - Uses a stack to push nodes onto.
   - Because a stack is LIFO it does not need to keep track of the nodes pointers and is therefore less memory intensive than breadth first search.
   - Once it cannot go further left it begins evaluating the stack.
+
+#### Pseudocode
+```
+DFS(root node)
+  create a stack
+  create list of visited node
+  mark root node as visited
+  stack.push(root)
+  while (stack is not empty)
+    x = stack.front()
+    stack.pop()
+    if(x is not visited)
+      mark x as visited
+      for(each neighbor n of x)
+        stack.push(n)
+```
 
 #### Time Complexity
 - Search: Depth First Search: O(|E| + |V|)
