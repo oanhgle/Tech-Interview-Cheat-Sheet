@@ -281,6 +281,7 @@ BFS (root node)
 
 #### Pseudocode
 ```
+//using stack
 DFS(root node)
   create a stack
   create list of visited node
@@ -293,6 +294,17 @@ DFS(root node)
       mark x as visited
       for(each neighbor n of x)
         stack.push(n)
+        
+```
+```
+//using recursion
+vector<int> adj[N]
+bool visited[N]
+DFS (node)
+  if (visited[node]) return
+  visited[node] = true
+  for (auto u: adj[node])
+    dfs(u)
 ```
 
 #### Time Complexity
